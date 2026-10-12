@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <!-- 仮の画像です。本物の写真が用意できたら、このファイルを差し替えてください -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f2ea"/>
+      <stop offset="1" stop-color="#e5dccd"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg)"/>
+  <g fill="none" stroke="#b89b5e" stroke-width="2.5" stroke-linecap="round">
+    <circle cx="200" cy="290" r="62"/>
+  </g>
+  <g transform="translate(200 228)">
+    <polygon points="0,-16 14,0 0,16 -14,0" fill="#b3b0d6" stroke="#b89b5e" stroke-width="1.5"/>
+    <polygon points="0,-16 14,0 0,0" fill="#ffffff" opacity="0.45"/>
+  </g>
+</svg>

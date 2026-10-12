@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- 仮の画像です。作家さんの写真や、作業風景の写真に差し替えてください -->
+  <rect width="400" height="400" fill="#ead9cc"/>
+  <circle cx="200" cy="160" r="58" fill="#f7f1e8"/>
+  <path d="M90 400 C90 290 310 290 310 400 Z" fill="#f7f1e8"/>
+</svg>

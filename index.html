@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!-- ↑「このファイルはHTML5で書かれています」とブラウザに伝える決まり文句です -->
+
+<!-- lang="ja" は「このページは日本語です」という意味です -->
+<html lang="ja">
+
+<!-- ========================================================
+     <head> … ページの「設定」を書く場所（画面には表示されません）
+     ======================================================== -->
+<head>
+  <!-- 文字化けを防ぐための設定 -->
+  <meta charset="UTF-8">
+
+  <!-- スマホで見たときに、画面の幅に合わせて表示するための設定（必須） -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ブラウザのタブに表示されるタイトル -->
+  <title>Petit Éclat（プティ・エクラ）｜ひと粒の宝石のアクセサリー</title>
+
+  <!-- 検索結果などに表示されるページの説明文 -->
+  <meta name="description" content="ワンポイントの宝石を使った、少し上品なハンドメイドアクセサリー Petit Éclat（プティ・エクラ）のホームページです。">
+
+  <!-- 練習用の架空のお店なので、検索結果に出ないようにする設定 -->
+  <meta name="robots" content="noindex">
+
+  <!-- Googleフォント（無料のWebフォント）を読み込みます。
+       ・Noto Serif JP … 日本語の明朝体（細め=300 を使います）
+       ・Cormorant Garamond … ブランド名などに使う英字の書体
+       インターネットにつながっていないときは、style.css で指定した
+       パソコン内の明朝体が代わりに使われます。 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- 見た目（色・大きさ・配置）を決めるCSSファイルを読み込みます -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- ========================================================
+     <body> … 実際に画面に表示される中身
+     ======================================================== -->
+<body>
+
+  <!-- ------------------------------------------------------
+       ヘッダー（ページの一番上のロゴとメニュー）
+       ------------------------------------------------------ -->
+  <header class="header">
+    <!-- ロゴ。href="#top" は「このページの id="top" の場所へ移動」という意味 -->
+    <a class="header-logo" href="#top">Petit Éclat</a>
+
+    <!-- <nav> は「ナビゲーション（メニュー）」を表すタグ -->
+    <nav class="nav">
+      <!-- href="#gallery" をクリックすると、id="gallery" の場所までスクロールします -->
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#order">Order</a>
+      <a href="#voice">Voice</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- <main> は「このページの主な内容」を表すタグ -->
+  <main>
+
+    <!-- ----------------------------------------------------
+         1. トップ（ブランド名と紹介文）
+         ---------------------------------------------------- -->
+    <!-- <section> は「ひとまとまりの内容」を表すタグ。
+         id はページ内リンクの行き先、class はCSSで見た目をつけるための名前です -->
+    <section id="top" class="hero">
+      <p class="hero-sub">Handmade Jewelry</p>
+
+      <!-- <h1> はページで一番大事な見出し。1ページに1つだけ使います -->
+      <h1 class="hero-title">Petit Éclat</h1>
+      <p class="hero-kana">プティ・エクラ</p>
+
+      <!-- 金色の細い飾り線（中身は空で、CSSで線として見せています） -->
+      <div class="gold-line"></div>
+
+      <!-- <br> は改行です -->
+      <p class="hero-text">
+        ひと粒の宝石が、そっと光を添える。<br>
+        毎日の装いに寄りそう、<br>
+        少し上品なアクセサリーをお届けします。
+      </p>
+
+      <a class="button" href="#gallery">作品一覧へ</a>
+    </section>
+
+    <!-- ----------------------------------------------------
+         2. 作品ギャラリー
+         ---------------------------------------------------- -->
+    <section id="gallery" class="section">
+      <!-- 英語の小見出し＋日本語の見出し のセット（各セクション共通の形） -->
+      <p class="section-en">Gallery</p>
+      <h2 class="section-title">作品ギャラリー</h2>
+
+      <!-- 作品カードを並べる入れ物。CSSの「グリッド」で自動的に並びます -->
+      <div class="gallery">
+
+        <!-- ▼ 作品カード1つ分。作品を増やすときは <figure>〜</figure> をコピーして増やします -->
+        <figure class="item">
+          <!-- <img> は画像。src=画像の場所、alt=画像が表示できないときや
+               読み上げソフト用の説明文です。
+               写真を差し替えるときは src のファイル名を変えるだけでOK -->
+          <img src="images/bracelet-1.svg" alt="ローズクォーツのブレスレット" width="400" height="500">
+          <!-- <figcaption> は画像の説明 -->
+          <figcaption>
+            <span class="item-type">Bracelet</span>
+            <span class="item-name">ローズクォーツのブレスレット</span>
+            <span class="item-price">¥4,800</span>
+          </figcaption>
+        </figure>
+
+        <figure class="item">
+          <img src="images/necklace-1.svg" alt="ピンクトルマリンのネックレス" width="400" height="500">
+          <figcaption>
+            <span class="item-type">Necklace</span>
+            <span class="item-name">ピンクトルマリンのネックレス</span>
+            <span class="item-price">¥6,500</span>
+          </figcaption>
+        </figure>
+
+        <figure class="item">
+          <img src="images/ring-1.svg" alt="モルガナイトの指輪" width="400" height="500">
+          <figcaption>
+            <span class="item-type">Ring</span>
+            <span class="item-name">モルガナイトの指輪</span>
+            <span class="item-price">¥5,200</span>
+          </figcaption>
+        </figure>
+
+        <figure class="item">
+          <img src="images/bracelet-2.svg" alt="アクアマリンのブレスレット" width="400" height="500">
+          <figcaption>
+            <span class="item-type">Bracelet</span>
+            <span class="item-name">アクアマリンのブレスレット</span>
+            <span class="item-price">¥5,000</span>
+          </figcaption>
+        </figure>
+
+        <figure class="item">
+          <img src="images/necklace-2.svg" alt="ペリドットのネックレス" width="400" height="500">
+          <figcaption>
+            <span class="item-type">Necklace</span>
+            <span class="item-name">ペリドットのネックレス</span>
+            <span class="item-price">¥6,200</span>
+          </figcaption>
+        </figure>
+
+        <figure class="item">
+          <img src="images/ring-2.svg" alt="タンザナイトの指輪" width="400" height="500">
+          <figcaption>
+            <span class="item-type">Ring</span>
+            <span class="item-name">タンザナイトの指輪</span>
+            <span class="item-price">¥5,800</span>
+          </figcaption>
+        </figure>
+
+         <figure class="item">
+          <img src="images/necklace-1.svg" alt="ムーンストーンのネックレス" width="400" height="500">
+          <figcaption>
+            <span class="item-type">Necklace</span>
+            <span class="item-name">ムーンストーンのネックレス</span>
+            <span class="item-price">¥6,800</span>
+          </figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         3. 作家紹介
+         class を2つ（section と section-beige）つけています。
+         section-beige は「背景をベージュにする」ための追加の名前です
+         ---------------------------------------------------- -->
+    <section id="about" class="section section-beige">
+      <p class="section-en">About</p>
+      <h2 class="section-title">作家紹介</h2>
+
+      <!-- 写真と文章を横に並べる入れ物（スマホでは縦に並びます） -->
+      <div class="about">
+        <img class="about-photo" src="images/artist.svg" alt="作家の写真" width="400" height="400">
+
+        <div class="about-text">
+          <p class="about-name">祈里 <span>（kiri）</span></p>
+          <p>
+            小さなアトリエで、ひとつひとつ手作業でアクセサリーを仕立てています。
+          </p>
+          <p>
+            「Petit Éclat」はフランス語で「小さなきらめき」という意味。
+            主役はたったひと粒の宝石です。
+            飾りすぎず、けれど身につけると少し背すじが伸びるような、
+            そんな作品を目指しています。
+          </p>
+          <p>
+            石はひとつずつ色や表情が違うため、すべてが一点ものです。
+            あなたにとってのお気に入りが見つかりますように。
+          </p>
+        </div>
+          
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         4. ご注文方法
+         ---------------------------------------------------- -->
+    <section id="order" class="section">
+      <p class="section-en">Order</p>
+      <h2 class="section-title">ご注文方法</h2>
+
+      <!-- <ol> は「番号つきリスト」、<li> がその1項目です。
+           手順のように順番に意味があるときに使います -->
+      <ol class="steps">
+        <li class="step">
+          <span class="step-number">01</span>
+          <h3 class="step-title">お問い合わせ</h3>
+          <p>気になる作品名を添えて、お問い合わせフォームまたはメールでご連絡ください。</p>
+        </li>
+        <li class="step">
+          <span class="step-number">02</span>
+          <h3 class="step-title">ご確認・お見積り</h3>
+          <p>在庫やサイズ、納期を確認し、3営業日以内にお返事いたします。</p>
+        </li>
+        <li class="step">
+          <span class="step-number">03</span>
+          <h3 class="step-title">お支払い</h3>
+          <p>銀行振込にて承ります。ご入金の確認後に制作を始めます。</p>
+        </li>
+        <li class="step">
+          <span class="step-number">04</span>
+          <h3 class="step-title">お届け</h3>
+          <p>ギフトボックスに入れて、2週間ほどでお届けします。</p>
+        </li>
+
+         <li class="step">
+          <span class="step-number">05</span>
+          <h3 class="step-title">アフターケア</h3>
+          <p>購入後１年間のアフター保証つき。無料でお直しいたします。（条件有り）</p>
+        </li>
+      </ol>
+
+      <p class="note">※ 指輪のサイズ直しや、石の色のご相談も承ります。お気軽にどうぞ。</p>
+    </section>
+
+        <!-- ----------------------------------------------------
+         5. お客様の声
+         ---------------------------------------------------- -->
+    <section id="voice" class="section section-pink">
+      <p class="section-en">Voice</p>
+      <h2 class="section-title">お客様の声</h2>
+
+            <ol class="steps">
+        <li class="voice-card">
+           <h3 class="voice-name">30代・M様</h3>
+          <p>誕生日に自分へのご褒美として購入しました。ひと粒の石がさりげなく光って、仕事の日にも休日にも合わせやすいです。</p>
+        </li>
+        <li class="voice-card">
+          <h3 class="voice-name">20代・S様</h3>
+          <p>母へのプレゼントに選びました。ギフトボックスがとても上品で、開けた瞬間に喜んでもらえました。</p>
+        </li>
+        <li class="voice-card">
+          <h3 class="voice-name">40代・K様</h3>
+          <p>指輪のサイズを相談したところ、丁寧に対応していただきました。石の色も写真どおりで、毎日つけています。</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ----------------------------------------------------
+         6. お問い合わせ
+         ---------------------------------------------------- -->
+    <section id="contact" class="section section-beige">
+      <p class="section-en">Contact</p>
+      <h2 class="section-title">お問い合わせ</h2>
+
+      <p class="contact-lead">
+        作品のご注文やご質問は、下のフォームまたはメールからお気軽にどうぞ。
+      </p>
+
+      <!-- <form> は入力フォーム。
+           【大事】HTMLとCSSだけでは、フォームの内容を実際に送信することはできません。
+           今は「見た目だけ」の練習用です。本当に送れるようにするには、
+           フォーム送信サービス（Googleフォーム、Formspree など）を使います -->
+      <form class="form" action="#" method="post">
+
+        <!-- <label> は入力欄の名前。for と、入力欄の id を同じにすると、
+             ラベルをタップしても入力欄が選ばれるようになります -->
+        <label for="name">お名前</label>
+        <!-- required は「入力必須」という意味 -->
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">メールアドレス</label>
+        <!-- type="email" にすると、スマホでメール用のキーボードが出ます -->
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">お問い合わせ内容</label>
+        <!-- <textarea> は複数行の入力欄。rows="6" は高さ（6行分） -->
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <!-- type="button" は「押しても送信しない」ボタン。
+             公開したサイトで押すとエラー画面になるのを防いでいます。
+             本当に送れるようにするときは type="submit" に戻します -->
+        <button class="button" type="button">送信する</button>
+        <p class="form-note">＊練習用のサイトのため、送信はできません。</p>
+      </form>
+
+      <!-- mailto: をつけると、クリックでメールアプリが開きます（アドレスは架空です） -->
+      <p class="contact-mail">
+        メール：<a href="mailto:hello@petit-eclat.example">hello@petit-eclat.example</a>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ------------------------------------------------------
+       フッター（ページの一番下）
+       ------------------------------------------------------ -->
+  <footer class="footer">
+    <p class="footer-logo">Petit Éclat</p>
+    <!-- &copy; は ©（コピーライトマーク）を表示するための書き方 -->
+    <p><small>&copy; 2026 Petit Éclat</small></p>
+    <!-- ポートフォリオとして見せるための注意書き -->
+    <p class="footer-note">＊このサイトは練習用に作った架空のお店です。</p>
+  </footer>
+
+</body>
+</html>
